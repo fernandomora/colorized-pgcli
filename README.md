@@ -1,4 +1,4 @@
-## Install pgcli
+## Install pgcli:
 
 <https://github.com/dbcli/pgcli>
 
@@ -6,7 +6,7 @@
 brew install --build-from-source pgcli
 ```
 
-## Install grc
+## Install grc:
 
 <https://github.com/pengwynn/grc>
 
@@ -14,36 +14,36 @@ brew install --build-from-source pgcli
 brew install grc
 ```
 
-## Clone colorized-pgcli
+## Clone colorized-pgcli:
 
 ```
 git clone git://github.com/fernandomora/colorized-pgcli ~/.colorized-pgcli
 ```
 
-## Create link config files from cloned repo
+## Link to config files from cloned repo:
 
 ```
 mkdir -p ~/.config/pgcli
-ln -sf ~/.colorized-pgcli/.config/pgcli/config ~/.config/pgcli/config
+ln -svi ~/.colorized-pgcli/.config/pgcli/config ~/.config/pgcli/config
 ```
 
 ```
 mkdir -p ~/.grc
-ln -sf ~/.colorized-pgcli/.grc/conf.psql ~/.grc/conf.psql
+ln -svi ~/.colorized-pgcli/.grc/conf.psql ~/.grc/conf.psql
 ```
 
-## Alias psql command to pgcli using grc filtered pager 
+## Alias pgcli command to pgcli using grc filtered pager: 
 
 ```
-alias psql="PAGER='grcat ~/.grc/conf.psql | less -iMSx4FXRe' pgcli"
+alias pgcli="PAGER='grcat ~/.grc/conf.psql | less -iMSx4FXRe' pgcli"
 ```
 
-#### To make it persistent in zsh
+#### To make it persistent in zsh:
 ```
-echo "alias psql=\"PAGER='grcat ~/.grc/conf.psql | less -iMSx4FXRe' pgcli\"" >> ~/.zshrc
+echo "alias pgcli=\"PAGER='grcat ~/.grc/conf.psql | less -iMSx4FXRe' pgcli\"" >> ~/.zshrc
 ```
 
-## Extra step: Install heroku addon for pgcli
+## Extra step: Install heroku addon for pgcli:
 
 <https://github.com/chrisanderton/heroku-pg-pgcli>
 
